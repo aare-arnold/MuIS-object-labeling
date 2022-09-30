@@ -1,8 +1,8 @@
 <!-- SPACY PROJECT: AUTO-GENERATED DOCS START (do not remove) -->
 
-# 🪐 spaCy Project: Demo Textcat (Text Classification)
+# 🪐 spaCy Project: Improving the quality of museums data
 
-A minimal demo textcat project for spaCy v3. The demo data comes from the [tutorials/textcat_docs_issues](https://github.com/explosion/projects/tree/v3/tutorials/textcat_docs_issues) project.
+Object-labeling solution to improve Estonian museum information system.
 
 ## 📋 project.yml
 
@@ -18,11 +18,14 @@ Commands are only re-run if their inputs have changed.
 
 | Command | Description |
 | --- | --- |
+| `preprocess` | Preproccesses traing data for evaluation |
 | `convert` | Convert the data to spaCy's binary format |
 | `train` | Train the textcat model |
 | `evaluate` | Evaluate the model and export metrics |
 | `package` | Package the trained model as a pip package |
 | `visualize-model` | Visualize the model's output interactively using Streamlit |
+| `test` | Test the trained pipeline |
+| `clean` | Remove intermediate files |
 
 ### ⏭ Workflows
 
@@ -33,7 +36,7 @@ inputs have changed.
 
 | Workflow | Steps |
 | --- | --- |
-| `all` | `convert` &rarr; `train` &rarr; `evaluate` &rarr; `package` |
+| `all` | `preprocess` &rarr; `convert` &rarr; `train` &rarr; `evaluate` &rarr; `package` |
 
 ### 🗂 Assets
 
@@ -43,7 +46,8 @@ in the project directory.
 
 | File | Source | Description |
 | --- | --- | --- |
-| [`assets/docs_issues_training.jsonl`](assets/docs_issues_training.jsonl) | Local | Demo training data |
-| [`assets/docs_issues_eval.jsonl`](assets/docs_issues_eval.jsonl) | Local | Demo development data |
+| [`assets/unique_types.csv`](assets/unique_types.csv) | Local | Types list |
+| [`assets/train.csv`](assets/train.csv) | Local | Training data |
+| [`assets/eval.csv`](assets/eval.csv) | Local | Development data |
 
 <!-- SPACY PROJECT: AUTO-GENERATED DOCS END (do not remove) -->
