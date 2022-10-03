@@ -13,7 +13,7 @@ def test(model: str, input_path: Path, output_path: Path):
     data = pd.read_csv(input_path, encoding='utf-8')
     data = data.replace(({ np.nan: '' }))
 
-    docs = [nlp.tokenizer(utils.clean_text2(row)) for index, row in data.iterrows()]
+    docs = [nlp.tokenizer(utils.clean_text(row)) for index, row in data.iterrows()]
     textcat = nlp.get_pipe('textcat')
 
     scores = textcat.predict(docs)

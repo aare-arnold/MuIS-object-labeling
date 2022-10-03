@@ -2,7 +2,7 @@ import re
 import pandas
 import unidecode
 
-def clean_text2(row: pandas.Series):
+def clean_text(row: pandas.Series):
     columns = [
         'material', 'technique', 'museum_abbr', 'collection_mark',
         'name', 'commentary', 'participants_role', 'location', 'event_type',

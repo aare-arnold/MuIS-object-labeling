@@ -27,7 +27,7 @@ def convert(lang: str, input_path: Path, input_types_path: Path, output_path: Pa
     })
 
     for index, row in data.iterrows():
-        text = utils.clean_text2(row)
+        text = utils.clean_text(row)
         
         if (len(text) == 0): continue
 
